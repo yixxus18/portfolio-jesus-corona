@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const last_posts = posts.slice(0, 3);
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hola a todos 👋</div>
+    <div class="text-5xl font-bold">Soy Jesus Corona Orozco</div>
+    <div class="text-3xl py-3 font-bold">Estudiante de Desarrollo de Software</div>
+    <div class="py-2">
+      <text class="text-lg">
+        ¡Hola y bienvenido/a a mi portfolio! Soy <b> Jesus Corona</b> , un apasionado estudiante de la carrera de <b>Tecnologias de la Informacion </b>
+        en el area de  <b>Desarrollo de Software Multiplataforma</b>. A lo largo de mi trayectoria académica,
+        he tenido la oportunidad de trabajar en diversos proyectos que han ampliado mis conocimientos y habilidades en el mundo del desarrollo de software.
+      </text>
+    </div>
+    
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">Mis Ultimos proyectos {"</>"}</div>
+  </div>
+
+  <HorizontalCard
+    title="TecnoTruck V2"
+    img="/truck.webp"
+    desc="Mejora del proyecto de TecnoTruck , ahora se mejoro el tiempo de respuesta de los sensores haciendolos casi en tiempo real , se implemento una aplicacion movil para Iphone con Swift y tambien se agrego una pagina web desarrollada con Angular. "
+    url="https://github.com/RickGrimmes/SensorTruck"
+    badge="NUEVO"
+    witdh
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Juego con Animaciones de Angular y Web Socket"
+    img="/barquito.webp"
+    desc="Este proyecto es un juego interactivo desarrollado con Angular y Web Sockets para dos jugadores. Presenta animaciones en tiempo real donde cada jugador ve primero su animación y luego la del oponente. También incluye un sistema de búsqueda de partida para facilitar la conexión entre jugadores."
+    url="https://github.com/yixxus18/juego-igmar"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Tecnoweb V1"
+    img="/tw1.webp"
+    desc="Es un vehículo de control remoto, constituye una reducida réplica de los automóviles empleados en el ámbito minero. Este vehículo a control remoto se distingue por la integración de seis sensores distintos, diseñados con el propósito de facilitar la operación y la presentación de datos recopilados durante su manejo. Dichos datos se despliegan en una aplicacion de android, brindando una representación detallada a través de una lista de información."
+    url="#"
+    
+  />
+
+  
+
+  
+</BaseLayout>

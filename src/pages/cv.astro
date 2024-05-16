@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Perfil</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Soy Jesus Corona , un apasionado estudiante de la carrera de Tecnologias de la Informacion en el area de Desarrollo de Software Multiplataforma. A lo largo de mi trayectoria académica, he tenido la oportunidad de trabajar en diversos proyectos que han ampliado mis conocimientos y habilidades en el mundo del desarrollo de software.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Educacion</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="TSU en Desarrollo de Software Multiplataforma"
+      subtitle="2022 to 2024 at Universidad Tecnologica de Torreon, Torreon Coahuila, Mexico."
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experiencia</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="UTT"
+      
+    >
+      Estadias Profesionales en ...
+    </TimeLineElement>
+    
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certificaciones</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="#" target="_blank"> CCNAV7 : Introduccion a Redes</a>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Habilidades en </div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>Python</li>
+    <li>C#</li>
+    <li>JavaScript</li>
+    <li>TypeScript</li>
+    <li>Java</li>
+    <li>NoSQL</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>PHP</li>
+    <li>Swift</li>
+  </ul>
+</BaseLayout>
